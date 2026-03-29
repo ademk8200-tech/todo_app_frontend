@@ -73,7 +73,7 @@ export interface PreloaderConfig {
 export const preloaderConfig: PreloaderConfig = {
   brandName: "GörevYap",
   brandSubname: "Productivity",
-  yearText: "Est. 2024",
+  yearText: "Est. 2026",
 };
 
 // -----------------------------------------------------------------------------
@@ -160,7 +160,7 @@ export const wineShowcaseConfig: WineShowcaseConfig = {
       id: "basic",
       name: "Temel Plan",
       subtitle: "Bireysel Kullanım",
-      year: "2024",
+      year: "2026",
       image: `${import.meta.env.BASE_URL}images/temel-plan.png`,
       filter: "grayscale(1) brightness(1.5) contrast(1.1)",
       glowColor: "bg-emerald-500/20",
@@ -181,7 +181,7 @@ export const wineShowcaseConfig: WineShowcaseConfig = {
       id: "pro",
       name: "Pro Plan",
       subtitle: "Profesyoneller İçin",
-      year: "2024",
+      year: "2026",
       image: `${import.meta.env.BASE_URL}images/temel-plan.png`,
       filter: "",
       glowColor: "bg-blue-500/20",
@@ -197,7 +197,7 @@ export const wineShowcaseConfig: WineShowcaseConfig = {
       id: "team",
       name: "Ekip Planı",
       subtitle: "Takım Çalışması",
-      year: "2024",
+      year: "2026",
       image: `${import.meta.env.BASE_URL}images/team-plan.png`,
       filter: "",
       glowColor: "bg-purple-500/20",
@@ -334,7 +334,7 @@ export const museumConfig: MuseumConfig = {
   mainTitle: "Verimliliğinizi Artırın",
   introText: "GörevYap, modern insanın karmaşık hayatını basitleştirmek için tasarlandı. İster öğrenci, ister profesyonel, ister ev hanımı olun, görevlerinizi kontrol altına alın.",
   timeline: [
-    { year: "2024", event: "Uygulama lansmanı" },
+    { year: "2026", event: "Uygulama lansmanı" },
     { year: "50K+", event: "Aktif kullanıcı" },
     { year: "1M+", event: "Tamamlanan görev" },
     { year: "99%", event: "Memnuniyet oranı" },
@@ -377,7 +377,7 @@ export const museumConfig: MuseumConfig = {
   openingHours: "7/24 Aktif",
   openingHoursLabel: "Destek",
   ctaButtonText: "Daha Fazla Bilgi",
-  yearBadge: "2024",
+  yearBadge: "2026",
   yearBadgeLabel: "Kuruluş",
   quote: {
     prefix: "Misyonumuz",
@@ -451,7 +451,7 @@ export const newsConfig: NewsConfig = {
       image: `${import.meta.env.BASE_URL}images/news-1.jpg`,
       title: "Pomodoro Tekniği Nedir?",
       excerpt: "Verimliliğinizi artıran zaman yönetimi tekniği hakkında bilmeniz gerekenler.",
-      date: "15 Mart 2024",
+      date: "15 Mart 2026",
       category: "Verimlilik",
     },
     {
@@ -459,7 +459,7 @@ export const newsConfig: NewsConfig = {
       image: `${import.meta.env.BASE_URL}images/news-2.jpg`,
       title: "Görev Önceliklendirme Sanatı",
       excerpt: "Önemli görevleri nasıl belirlersiniz ve zamanınızı en verimli şekilde kullanırsınız?",
-      date: "10 Mart 2024",
+      date: "10 Mart 2026",
       category: "Planlama",
     },
     {
@@ -467,7 +467,7 @@ export const newsConfig: NewsConfig = {
       image: `${import.meta.env.BASE_URL}images/news-3.jpg`,
       title: "Dijital Minimalizm",
       excerpt: "Daha az araçla daha fazla iş yapmanın yolları ve dijital düzenin önemi.",
-      date: "5 Mart 2024",
+      date: "5 Mart 2026",
       category: "Yaşam Tarzı",
     },
     {
@@ -475,7 +475,7 @@ export const newsConfig: NewsConfig = {
       image: `${import.meta.env.BASE_URL}images/news-4.jpg`,
       title: "Ekip Çalışması İpuçları",
       excerpt: "Uzaktan çalışma ortamında takım verimliliğini artırmanın stratejileri.",
-      date: "1 Mart 2024",
+      date: "1 Mart 2026",
       category: "İşbirliği",
     },
   ],
@@ -507,7 +507,7 @@ export const newsConfig: NewsConfig = {
   storyTitle: "Organizasyon Tutkusu",
   storyParagraphs: [
     "GörevYap, kendi organizasyon sorunlarımızı çözmek için doğdu. Karmaşık uygulamaların aksine, basit ama güçlü bir araç istedik.",
-    "2024'te küçük bir ekip olarak yola çıktık ve şimdi 50.000'den fazla kullanıcıya hizmet veriyoruz. Her gün gelişmeye devam ediyoruz.",
+    "2026'te küçük bir ekip olarak yola çıktık ve şimdi 50.000'den fazla kullanıcıya hizmet veriyoruz. Her gün gelişmeye devam ediyoruz.",
   ],
   storyTimeline: [
     { value: "50K+", label: "Kullanıcı" },
@@ -681,7 +681,7 @@ export const footerConfig: FooterConfig = {
   newsletterSuccessText: "Başarıyla abone oldunuz!",
   newsletterErrorText: "Bir hata oluştu. Lütfen tekrar deneyin.",
   newsletterEndpoint: "https://formspree.io/f/xnqevjdr",
-  copyrightText: "© 2024 GörevYap. Tüm hakları saklıdır.",
+  copyrightText: "© 2026 GörevYap. Tüm hakları saklıdır.",
   legalLinks: ["Gizlilik Politikası", "Kullanım Koşulları", "Çerez Politikası"],
   icpText: "",
   backToTopText: "Yukarı Çık",
