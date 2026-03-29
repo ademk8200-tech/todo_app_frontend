@@ -593,7 +593,7 @@ export const contactFormConfig: ContactFormConfig = {
     errorMessage: "Bir hata oluştu. Lütfen tekrar deneyin.",
   },
   privacyNotice: "Formu göndererek gizlilik politikasını kabul etmiş olursunuz.",
-  formEndpoint: "https://formspree.io/f/xnqevjdr",
+  formEndpoint: "https://formspree.io/f/xojpeokk",
 };
 
 // -----------------------------------------------------------------------------
@@ -680,7 +680,7 @@ export const footerConfig: FooterConfig = {
   newsletterButtonText: "Abone Ol",
   newsletterSuccessText: "Başarıyla abone oldunuz!",
   newsletterErrorText: "Bir hata oluştu. Lütfen tekrar deneyin.",
-  newsletterEndpoint: "https://formspree.io/f/xnqevjdr",
+  newsletterEndpoint: "https://formspree.io/f/xojpeokk",
   copyrightText: "© 2026 GörevYap. Tüm hakları saklıdır.",
   legalLinks: ["Gizlilik Politikası", "Kullanım Koşulları", "Çerez Politikası"],
   icpText: "",
