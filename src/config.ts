@@ -484,20 +484,20 @@ export const newsConfig: NewsConfig = {
   testimonialsMainTitle: "Kullanıcılarımız Ne Diyor?",
   testimonials: [
     {
-      name: "İrem Bektaş",
+      name: "Baha Çelik",
       role: "Öğrenci",
       text: "Sınav dönemlerinde GörevYap olmadan hayatımı düşünemiyorum. Ders programımı ve projelerimi çok kolay takip edebiliyorum.",
       rating: 5,
     },
     {
-      name: "Adem Efekan Korkmaz",
+      name: "Bekir Alataş",
       role: "Yazılım Geliştirici",
       text: "Jira'dan çok daha basit ve kullanıcı dostu. Küçük ekipler için mükemmel bir çözüm. Kesinlikle tavsiye ederim.",
       rating: 5,
     },
     {
       name: "2kai yazılım",
-      role: "şirketiz bu arada",
+      role: "yazılım şirketi",
       text: "Takımımızın verimliliği %50 arttı. Artık kim ne yapıyor net görüyoruz. İletişim karmaşası tamamen ortadan kalktı.",
       rating: 5,
     },
@@ -570,9 +570,9 @@ export const contactFormConfig: ContactFormConfig = {
   introText: "Size yardımcı olmaktan mutluluk duyarız. Formu doldurun, en kısa sürede dönüş yapalım.",
   contactInfoTitle: "İletişim Bilgileri",
   contactInfo: [
-    { icon: "MapPin", label: "Adres", value: "İstanbul, Türkiye", subtext: "Merkez Ofis" },
-    { icon: "Phone", label: "Telefon", value: "+90 212 555 00 00", subtext: "7/24 Destek Hattı" },
-    { icon: "Mail", label: "E-posta", value: "destek@gorevyap.com", subtext: "Genel Sorular" },
+    { icon: "MapPin", label: "Adres", value: "Elazığ, Türkiye", subtext: "Merkez Ofis" },
+    { icon: "Phone", label: "Telefon", value: "+90 552 025 86 79", subtext: "7/24 Destek Hattı" },
+    { icon: "Mail", label: "E-posta", value: "ademk8200@gmail.com", subtext: "Genel Sorular" },
     { icon: "Clock", label: "Çalışma Saatleri", value: "7/24", subtext: "Online Destek" },
   ],
   form: {
@@ -646,9 +646,9 @@ export const footerConfig: FooterConfig = {
   description: "Görevlerinizi organize edin, verimliliğinizi artırın. Modern ve kullanıcı dostu todo list uygulaması.",
   socialLinks: [
     { icon: "Instagram", label: "Instagram", href: "https://www.instagram.com/adeem._k?igsh=Y205NWdpczVnNWky" },
-    { icon: "Facebook", label: "Facebook", href: "#" },
+    { icon: "Facebook", label: "Facebook", href: "https://www.facebook.com/RTErdogan/?locale=tr_TR" },
     { icon: "Twitter", label: "Twitter", href: "#" },
-    { icon: "Youtube", label: "Youtube", href: "#" },
+    { icon: "Youtube", label: "Youtube", href: "https://youtu.be/dQw4w9WgXcQ?si=ds_mbKvpQXsL0R-J" },
   ],
   linkGroups: [
     {
@@ -671,9 +671,9 @@ export const footerConfig: FooterConfig = {
     },
   ],
   contactItems: [
-    { icon: "MapPin", text: "İstanbul, Türkiye" },
-    { icon: "Phone", text: "+90 212 555 00 00" },
-    { icon: "Mail", text: "destek@gorevyap.com" },
+    { icon: "MapPin", text: "Elazığ, Türkiye" },
+    { icon: "Phone", text: "+90 552 025 86 79" },
+    { icon: "Mail", text: "ademk8200@gmail.com" },
   ],
   newsletterLabel: "Bültenimize Abone Olun",
   newsletterPlaceholder: "E-posta adresiniz",
@@ -724,14 +724,14 @@ export const teamConfig: TeamConfig = {
   members: [
     {
       id: 1,
-      name: "İrem Bektaş",
+      name: "Baha Çelik",
       role: "Kurucu Ortak",
       image: `${import.meta.env.BASE_URL}images/team-1.jpg`,
       description: "Yenilikçi teknolojiler ve modern arayüzler geliştirerek GörevYap'ın temelini sağlamlaştırıyor.",
     },
     {
       id: 2,
-      name: "Adem Efekan Korkmaz",
+      name: "Bekir Alataş",
       role: "Kurucu Ortak",
       image: `${import.meta.env.BASE_URL}images/team-2.jpg`,
       description: "Kullanıcı deneyimine odaklanan yapısıyla ürünün herkes tarafından sezgisel olarak kullanılmasını sağlıyor.",
