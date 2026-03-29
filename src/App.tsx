@@ -8,7 +8,7 @@ import { ProtectedRoute } from './components/ProtectedRoute';
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter basename="/todo_app">
+      <BrowserRouter basename="/todo_app_frontend">
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/auth" element={<AuthPage />} />

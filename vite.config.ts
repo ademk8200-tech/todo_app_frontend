@@ -4,7 +4,7 @@ import { defineConfig } from "vite"
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/todo_app/',
+  base: '/todo_app_frontend/',
   plugins: [react()],
   resolve: {
     alias: {
