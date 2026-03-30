@@ -724,14 +724,14 @@ export const teamConfig: TeamConfig = {
   members: [
     {
       id: 1,
-      name: "Baha Çelik",
+      name: "İrem Bektaş",
       role: "Kurucu Ortak",
       image: `${import.meta.env.BASE_URL}images/team-1.jpg`,
       description: "Yenilikçi teknolojiler ve modern arayüzler geliştirerek GörevYap'ın temelini sağlamlaştırıyor.",
     },
     {
       id: 2,
-      name: "Bekir Alataş",
+      name: "Adem Efekan Korkmaz",
       role: "Kurucu Ortak",
       image: `${import.meta.env.BASE_URL}images/team-2.jpg`,
       description: "Kullanıcı deneyimine odaklanan yapısıyla ürünün herkes tarafından sezgisel olarak kullanılmasını sağlıyor.",
