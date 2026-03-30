@@ -84,9 +84,27 @@ export const subscribeToTodos = (userId: string, callback: (todos: Todo[]) => vo
     });
     
     todosData.sort((a, b) => {
-      const timeA = a.createdAt?.toMillis ? a.createdAt.toMillis() : 0;
-      const timeB = b.createdAt?.toMillis ? b.createdAt.toMillis() : 0;
-      return timeB - timeA;
+      // 1. Try to sort by timeRange
+      const getTimeValue = (todo: Todo) => {
+        if (!todo.timeRange) return Infinity; // Put items without time at the bottom
+        const match = todo.timeRange.match(/(\d{1,2})[:.](\d{2})/);
+        if (match) {
+          return parseInt(match[1]) * 60 + parseInt(match[2]);
+        }
+        return Infinity;
+      };
+
+      const timeA = getTimeValue(a);
+      const timeB = getTimeValue(b);
+
+      if (timeA !== timeB) {
+        return timeA - timeB; // Chronological (9:00 comes before 11:00)
+      }
+
+      // 2. Fallback to createdAt if times are equal or missing
+      const createdA = a.createdAt?.toMillis ? a.createdAt.toMillis() : 0;
+      const createdB = b.createdAt?.toMillis ? b.createdAt.toMillis() : 0;
+      return createdB - createdA; // Newest first for same-time or no-time items
     });
     
     callback(todosData);
