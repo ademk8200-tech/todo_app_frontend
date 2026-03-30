@@ -647,7 +647,7 @@ export const footerConfig: FooterConfig = {
   socialLinks: [
     { icon: "Instagram", label: "Instagram", href: "https://www.instagram.com/adeem._k?igsh=Y205NWdpczVnNWky" },
     { icon: "Facebook", label: "Facebook", href: "https://www.facebook.com/RTErdogan/?locale=tr_TR" },
-    { icon: "Twitter", label: "Twitter", href: "#" },
+    { icon: "Twitter", label: "Twitter", href: "https://www.youtube.com/shorts/RhOsRrFJCcg" },
     { icon: "Youtube", label: "Youtube", href: "https://youtu.be/dQw4w9WgXcQ?si=ds_mbKvpQXsL0R-J" },
   ],
   linkGroups: [
