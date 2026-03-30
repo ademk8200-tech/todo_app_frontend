@@ -1,4 +1,4 @@
-import { collection, doc, addDoc, updateDoc, deleteDoc, onSnapshot, query, orderBy, serverTimestamp, where } from 'firebase/firestore';
+import { collection, doc, addDoc, updateDoc, deleteDoc, onSnapshot, query, serverTimestamp, where } from 'firebase/firestore';
 import { db } from '../lib/firebase';
 
 // Interfaces matching the frontend ones
@@ -28,15 +28,24 @@ export interface Todo {
 export const subscribeToLists = (userId: string, callback: (lists: TodoList[]) => void) => {
   const q = query(
     collection(db, 'lists'), 
-    where('userId', '==', userId),
-    orderBy('createdAt', 'desc')
+    where('userId', '==', userId)
   );
   
   return onSnapshot(q, (snapshot) => {
-    const listsData = snapshot.docs.map(doc => ({
-      id: doc.id,
-      ...doc.data()
-    } as TodoList));
+    const listsData = snapshot.docs.map(doc => {
+      const data = doc.data({ serverTimestamps: 'estimate' });
+      return {
+        id: doc.id,
+        ...data
+      } as TodoList;
+    });
+    
+    listsData.sort((a, b) => {
+      const timeA = a.createdAt?.toMillis ? a.createdAt.toMillis() : 0;
+      const timeB = b.createdAt?.toMillis ? b.createdAt.toMillis() : 0;
+      return timeB - timeA;
+    });
+    
     callback(listsData);
   });
 };
@@ -62,15 +71,24 @@ export const deleteList = async (listId: string) => {
 export const subscribeToTodos = (userId: string, callback: (todos: Todo[]) => void) => {
   const q = query(
     collection(db, 'todos'), 
-    where('userId', '==', userId),
-    orderBy('createdAt', 'desc')
+    where('userId', '==', userId)
   );
   
   return onSnapshot(q, (snapshot) => {
-    const todosData = snapshot.docs.map(doc => ({
-      id: doc.id,
-      ...doc.data()
-    } as Todo));
+    const todosData = snapshot.docs.map(doc => {
+      const data = doc.data({ serverTimestamps: 'estimate' });
+      return {
+        id: doc.id,
+        ...data
+      } as Todo;
+    });
+    
+    todosData.sort((a, b) => {
+      const timeA = a.createdAt?.toMillis ? a.createdAt.toMillis() : 0;
+      const timeB = b.createdAt?.toMillis ? b.createdAt.toMillis() : 0;
+      return timeB - timeA;
+    });
+    
     callback(todosData);
   });
 };
