@@ -34,6 +34,7 @@ export function Hero({ isReady }: { isReady: boolean }) {
   if (!heroConfig.mainTitle) return null;
 
   const [phase, setPhase] = useState(0);
+  const [isCheckingOff, setIsCheckingOff] = useState(false);
   // phase 0: hidden, 1: bg visible, 2: title, 3: cta, 4: stats counting
 
   // Build count-up hooks from stats config
@@ -54,6 +55,15 @@ export function Hero({ isReady }: { isReady: boolean }) {
     const t4 = setTimeout(() => setPhase(4), 2000);  // stats
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); clearTimeout(t4); };
   }, [isReady]);
+
+  const handleCtaClick = () => {
+    if (isCheckingOff) return;
+    setIsCheckingOff(true);
+    // Visual feedback delay before navigation
+    setTimeout(() => {
+      navigate(user ? '/todo' : '/auth');
+    }, 800);
+  };
 
   return (
     <section
@@ -90,14 +100,19 @@ export function Hero({ isReady }: { isReady: boolean }) {
         </h1>
 
         {/* CTA */}
-        <div className={`mt-10 transition-all duration-700 ease-out ${phase >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <button
-            onClick={() => navigate(user ? '/todo' : '/auth')}
-            className="btn-primary rounded-sm inline-flex items-center gap-2 group"
+        <div className={`mt-10 flex justify-center transition-all duration-700 ease-out ${phase >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <div
+            onClick={handleCtaClick}
+            className="todo-cta group"
+            role="button"
+            tabIndex={0}
           >
-            {user ? 'Görevlerime Git' : 'Hemen Başla / Giriş Yap'}
-            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </button>
+            <div className={`todo-checkbox ${isCheckingOff ? 'checked' : ''}`} />
+            <span className={`todo-text ${isCheckingOff ? 'checked' : ''}`}>
+              {user ? 'Görevlerime Git' : 'Hemen Başla / Giriş Yap'}
+            </span>
+            <ArrowRight className={`w-5 h-5 text-gold-500 transition-all duration-300 ${isCheckingOff ? 'opacity-0 translate-x-4' : 'group-hover:translate-x-1'}`} />
+          </div>
         </div>
       </div>
 

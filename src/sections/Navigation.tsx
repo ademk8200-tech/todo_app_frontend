@@ -21,6 +21,18 @@ export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isCheckingOff, setIsCheckingOff] = useState(false);
+
+  const handleCtaClick = () => {
+    if (isCheckingOff) return;
+    setIsCheckingOff(true);
+    setTimeout(() => {
+      navigate(user ? '/todo' : '/auth');
+      setIsMobileMenuOpen(false);
+      // Reset state for next time (since this is a persistent nav)
+      setTimeout(() => setIsCheckingOff(false), 1000);
+    }, 800);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -129,12 +141,17 @@ export function Navigation() {
         </div>
 
         {/* CTA Button */}
-        <button
-          onClick={() => navigate(user ? '/todo' : '/auth')}
-          className="hidden lg:block btn-primary rounded px-6 py-2"
+        <div
+          onClick={handleCtaClick}
+          className="hidden lg:flex todo-cta scale-75 origin-right py-2 px-6"
+          role="button"
+          tabIndex={0}
         >
-          {user ? 'Görevlerime Git' : 'Giriş Yap'}
-        </button>
+          <div className={`todo-checkbox !w-4 !h-4 ${isCheckingOff ? 'checked' : ''}`} />
+          <span className={`todo-text !text-sm ${isCheckingOff ? 'checked' : ''}`}>
+            {user ? 'Görevlerime Git' : 'Giriş Yap'}
+          </span>
+        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -218,15 +235,17 @@ export function Navigation() {
             );
           })}
 
-          <button
-            onClick={() => {
-              navigate(user ? '/todo' : '/auth');
-              setIsMobileMenuOpen(false);
-            }}
-            className="btn-primary rounded mt-6 text-center py-4"
+          <div
+            onClick={handleCtaClick}
+            className="todo-cta mt-6 flex justify-center"
+            role="button"
+            tabIndex={0}
           >
-            {user ? 'Görevlerime Git' : 'Giriş Yap / Kaydol'}
-          </button>
+            <div className={`todo-checkbox ${isCheckingOff ? 'checked' : ''}`} />
+            <span className={`todo-text ${isCheckingOff ? 'checked' : ''}`}>
+              {user ? 'Görevlerime Git' : 'Giriş Yap / Kaydol'}
+            </span>
+          </div>
         </div>
       </div>
     </nav>

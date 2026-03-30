@@ -280,6 +280,54 @@
   .section-chip {
     @apply inline-block px-4 py-1.5 bg-white/10 text-white/50 backdrop-blur-sm border border-white/5 rounded-sm mb-4;
   }
+
+  /* Todo-style CTA */
+  .todo-cta {
+    @apply flex items-center gap-4 px-8 py-4 cursor-pointer select-none transition-all duration-300 rounded-sm;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(210, 168, 85, 0.3);
+  }
+
+  .todo-cta:hover {
+    background: rgba(210, 168, 85, 0.1);
+    border-color: var(--gold-500);
+    transform: translateY(-2px);
+  }
+
+  .todo-checkbox {
+    @apply w-6 h-6 flex-shrink-0 border-2 border-gold-500 rounded-sm relative transition-all duration-300;
+  }
+
+  .todo-checkbox::after {
+    content: '';
+    @apply absolute left-[6px] top-[2px] w-[7px] h-[12px] border-r-2 border-b-2 border-gold-500 opacity-0 rotate-45 transition-all duration-300;
+  }
+
+  .todo-checkbox.checked {
+    @apply bg-gold-500 border-gold-500;
+  }
+
+  .todo-checkbox.checked::after {
+    @apply opacity-100 border-white;
+  }
+
+  .todo-text {
+    @apply relative text-xl font-serif tracking-wide text-white transition-all duration-500;
+  }
+
+  .todo-text::after {
+    content: '';
+    @apply absolute left-0 top-1/2 w-0 h-[2px] bg-gold-400/80 -translate-y-1/2 transition-all duration-500 ease-in-out;
+  }
+
+  .todo-text.checked::after {
+    @apply w-full;
+  }
+
+  .todo-text.checked {
+    @apply opacity-50;
+  }
 }
 
 @layer utilities {
