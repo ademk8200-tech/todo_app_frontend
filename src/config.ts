@@ -484,13 +484,13 @@ export const newsConfig: NewsConfig = {
   testimonialsMainTitle: "Kullanıcılarımız Ne Diyor?",
   testimonials: [
     {
-      name: "İrem Bektaş",
+      name: "Baha Çelik",
       role: "Öğrenci",
       text: "Sınav dönemlerinde GörevYap olmadan hayatımı düşünemiyorum. Ders programımı ve projelerimi çok kolay takip edebiliyorum.",
       rating: 5,
     },
     {
-      name: "Adem Efekan Korkmaz",
+      name: "Bekir Alataş",
       role: "Yazılım Geliştirici",
       text: "Jira'dan çok daha basit ve kullanıcı dostu. Küçük ekipler için mükemmel bir çözüm. Kesinlikle tavsiye ederim.",
       rating: 5,
@@ -724,14 +724,14 @@ export const teamConfig: TeamConfig = {
   members: [
     {
       id: 1,
-      name: "İrem Bektaş",
+      name: "Baha Çelik",
       role: "Kurucu Ortak",
       image: `${import.meta.env.BASE_URL}images/team-1.jpg`,
       description: "Yenilikçi teknolojiler ve modern arayüzler geliştirerek GörevYap'ın temelini sağlamlaştırıyor.",
     },
     {
       id: 2,
-      name: "Adem Efekan Korkmaz",
+      name: "Bekir Alataş",
       role: "Kurucu Ortak",
       image: `${import.meta.env.BASE_URL}images/team-2.jpg`,
       description: "Kullanıcı deneyimine odaklanan yapısıyla ürünün herkes tarafından sezgisel olarak kullanılmasını sağlıyor.",
